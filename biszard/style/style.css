@@ -1,0 +1,56 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+.background {
+	position: relative;
+	background-image: url("../assets/homepage.jpg");
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; 
+	text-align: center;
+}
+
+.logo {
+	position: relative;
+	height: 400px;
+	width: 400px;
+	margin: auto;
+	top: 20%;
+}
+
+.logospan {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+
+nav {
+	display: grid;
+	position: fixed;
+	z-index: 10;
+	color: white;
+	height: 100%;
+	width: 100%;
+	grid-template-columns: 100px 100px;
+	grid-template-rows: 100%;
+	grid-template-areas: "left right";
+	justify-content: space-between;
+}
+
+.left {
+	border-right: 2px solid white;
+	text-align: middle;
+}
+.right {
+	border-left: 2px solid white;
+	text-align: middle;
+}
+
+.story, .project{
+	transform: rotate(270deg);
+	padding: 400px 0px 400px 0px;
+}
+
