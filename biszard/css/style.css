@@ -1,62 +1,92 @@
 html, body {
-	height: 100%;
-	margin: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+
 .background {
-	position: relative;
-	background-image: url("../assets/homepage.png");
-	height: 100%;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	text-align: center;
+    position: relative;
+    background-image: url("../assets/homepage.png");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
 }
 
 .logo {
-	position: relative;
-	height: 400px;
-	width: 400px;
-	margin: auto;
-	top: 20%;
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    top: 20%;
 }
 
 .logospan {
-	margin: auto;
-	width: 100%;
-	height: 100%;
+    display: block;
+    padding-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
 }
 
-nav {
-	display: grid;
-	position: fixed;
-	z-index: 10;
-	color: black;
-	height: 100%;
-	width: 100%;
-	grid-template-columns: 110px 110px;
-	grid-template-rows: 100%;
-	grid-template-areas: "left right";
-	justify-content: space-between;
+.scroll {
+    margin-top: 40px;
 }
 
-.left {
-	border-right: 1px solid black;
-	text-align: middle;
-}
-.right {
-	border-left: 1px solid black;
-	text-align: middle;
+.transition {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+    text-decoration: none;
+    transition: background 0.5s;
 }
 
-.story, .project{
-	transform: rotate(270deg);
-	padding: 360px 0px 360px 0px;
-	color: black;
-	letter-spacing: 2px;
+.nav-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+.nav-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid black;
+}
+
+.story, .project {
+    transform: rotate(270deg);
+    color: black;
+    letter-spacing: 2px;
+}
+
+.story {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.project {
+    margin-left: -4px;
+    margin-right: -3px;
 }
 
 .container-1 {
+    position: relative;
     display: flex;
     height: 66%;
     padding-left: 120px;
@@ -64,6 +94,7 @@ nav {
 }
 
 .container-2 {
+    position: relative;
     background-color: rgb(83, 64, 142);
     height: 66%;
     text-align: right;
@@ -88,27 +119,25 @@ nav {
 
 .how-we-works h3 {
     letter-spacing: 2px;
-}
-
-.how-we-works hr {
-	height: 0.1px;
-	background: white;
-	width: 30%;
-	margin: 0 0 10px 0;
+    margin-bottom: -9px;
 }
 
 .how-we-works p {
-	font-size: 20px;
+    font-size: 20px;
 }
 
+.line {
+    display: inline-block;
+    margin-top: 2px;
+    border-top: 2px solid white;
+    width: 25%;
+}
 
 .what-is-biszard {
-    float: left;
-    margin-top: 120px;
+    margin-top: 100px;
     flex: 75%;
-    padding-top: 80px;
-    padding-bottom: 0px;
-    padding-left: 100px;
+    padding-top: 50px;
+    padding-left: 80px;
     padding-right: 60px;
     font-size: 20px;
 }
@@ -119,62 +148,60 @@ nav {
 }
 
 .what-is-biszard hr {
-	height: 0.1px;
-	background: black;
-	width: 30%;
-	margin: 0 0 10px 0;
+    height: 0.1px;
+    background: black;
+    width: 30%;
+    margin: 0 0 10px 0;
 }
 
 .contact-us {
-	color: black;
-    float: right;
+    color: black;
     margin-top: 120px;
     flex: 30%;
-    padding-top: 80px;
+    padding-top: 50px;
     padding-left: 70px;
     padding-bottom: 100px;
 }
 
 .contact-us h2 {
-
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
 }
 
 .contact-us hr {
-	height: 0.1px;
-	background: black;
-	width: 45%;
-	margin: 0 0 10px 0;
+    height: 0.1px;
+    background: black;
+    width: 45%;
+    margin: 0 0 10px 0;
 }
 
 .container-3 {
-	display: flex;
+    display: flex;
     height: 66%;
     padding-left: 120px;
     padding-right: 120px;
 }
 
 .start-your-idea {
-	left: 0;
-	top: 50%;
-	width: 100%;
-	text-align: center;
-	color: black;
-	margin-top: 150px;
-	line-height: 1.7;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    margin-top: 150px;
+    line-height: 1.7;
 }
 
 .row-1 {
-	font-size: 50px;
-	padding-bottom: 10px;
+    font-size: 50px;
+    padding-bottom: 10px;
 }
 
 .row-2 {
-	background-color: rgb(83, 64, 142);
-	padding: 8px 30px 8px 30px;
-	color: white;
-	font-size: 50px;
-	font-weight: 700;
+    background-color: rgb(83, 64, 142);
+    padding: 8px 30px 8px 30px;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
 }
